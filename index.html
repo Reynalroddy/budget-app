@@ -1,0 +1,244 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <!-- Required meta tags -->
+    <meta charset="utf-8" />
+    <meta
+      name="viewport"
+      content="width=device-width, initial-scale=1, shrink-to-fit=no"
+    />
+    <!-- font awesome kit -->
+    <script src="https://kit.fontawesome.com/d336935297.js"></script>
+    <!-- Bootstrap CSS -->
+    <link
+      rel="stylesheet"
+      href="https://stackpath.bootstrapcdn.com/bootstrap/4.5.2/css/bootstrap.min.css"
+      integrity="sha384-JcKb8q3iqJ61gNV9KGb8thSsNjpSL0n8PARn9HuZOnIxN0hoP+VmmDGMN5t9UJ0Z"
+      crossorigin="anonymous"
+    />
+
+    <title>Hello, world!</title>
+    <style>
+      .h-100 {
+        min-height: 100vh;
+      }
+
+      .notification-alert {
+        transition: all 2s ease-in;
+      }
+    </style>
+  </head>
+
+  <body>
+    <section class="budget">
+      <div class="container">
+        <div class="row h-100 align-items-center justify-content-center">
+          <div class="col-md-6 mx-auto">
+            <div
+              class="alert alert-success notification-alert d-none"
+              role="alert"
+            >
+              A simple success alert—check it out!
+            </div>
+            <div class="card">
+              <div class="card-body">
+                <div class="dashboard">
+                  <div class="row">
+                    <div class="col-3">
+                      <div
+                        class="nav flex-column nav-pills"
+                        id="v-pills-tab"
+                        role="tablist"
+                        aria-orientation="vertical"
+                      >
+                        <a
+                          class="nav-link active"
+                          id="v-pills-expenses-tab"
+                          data-toggle="pill"
+                          href="#v-pills-expenses"
+                          role="tab"
+                          aria-controls="v-pills-expenses"
+                          aria-selected="true"
+                          >Expenses</a
+                        >
+
+                        <a
+                          class="nav-link"
+                          id="v-pills-income-tab"
+                          data-toggle="pill"
+                          href="#v-pills-income"
+                          role="tab"
+                          aria-controls="v-pills-income"
+                          aria-selected="false"
+                          >Income</a
+                        >
+
+                        <a
+                          class="nav-link"
+                          id="v-pills-all-tab"
+                          data-toggle="pill"
+                          href="#v-pills-all"
+                          role="tab"
+                          aria-controls="v-pills-all"
+                          aria-selected="false"
+                          >All</a
+                        >
+                      </div>
+                    </div>
+                    <div class="col-9">
+                      <div class="tab-content" id="v-pills-tabContent">
+                        <div
+                          class="tab-pane fade show active"
+                          id="v-pills-expenses"
+                          role="tabpanel"
+                          aria-labelledby="v-pills-expenses-tab"
+                        >
+                          <div class="expenses-input">
+                            <input
+                              type="text"
+                              placeholder="expense name"
+                              id="expense-name"
+                            />
+                            <input
+                              type="text"
+                              placeholder="expense amount"
+                              id="expense-amount"
+                              class="my-3"
+                            />
+                            <input
+                              type="button"
+                              value="submit"
+                              id="submit-expense"
+                              class="sub submit-expense"
+                            />
+                          </div>
+
+                          <div class="expenses-dashboard">
+                            <!--
+                            <div
+                              class="expenses-list d-flex justify-content-around align-items-center"
+                            >
+                              <span class="exp-dashboard-name">Rent due</span>
+                              <span class="exp-dashboard-price">$5000</span>
+                              <span
+                                class="exp-dashboard-edit fas fa-edit"
+                              ></span>
+                              <span
+                                class="exp-dashboard-de fas fa-trash"
+                              ></span>
+                            </div>-->
+                          </div>
+                        </div>
+
+                        <div
+                          class="tab-pane fade"
+                          id="v-pills-income"
+                          role="tabpanel"
+                          aria-labelledby="v-pills-income-tab"
+                        >
+                          <div class="income-input">
+                            <input
+                              type="text"
+                              placeholder="income name"
+                              id="income-name"
+                            />
+                            <input
+                              type="text"
+                              placeholder="income amount"
+                              id="income-amount"
+                              class="my-3"
+                            />
+                            <input
+                              type="button"
+                              value="submit"
+                              id="submit-income"
+                              class="sub submit-income"
+                            />
+                          </div>
+
+                          <div class="income-dashboard">
+                            <!--
+                            <div
+                              class="income-list d-flex justify-content-around align-items-center"
+                            >
+                              <span class="income-dashboard-name">project</span>
+                              <span class="income-dashboard-price">$5000</span>
+                              <span
+                                class="income-dashboard-edit fas fa-edit"
+                              ></span>
+                              <span
+                                class="income-dashboard-de fas fa-trash"
+                              ></span>
+                            </div>-->
+                          </div>
+                        </div>
+
+                        <div
+                          class="tab-pane fade"
+                          id="v-pills-all"
+                          role="tabpanel"
+                          aria-labelledby="v-pills-all-tab"
+                        >
+                          <div
+                            class="all-dashboard d-flex justify-content-around align-items-center"
+                          >
+                            <span class="income-dashboard-name">project</span>
+                            <span class="income-dashboard-price">$5000</span>
+                            <span
+                              class="income-dashboard-edit fas fa-edit"
+                            ></span>
+                            <span
+                              class="income-dashboard-de fas fa-trash"
+                            ></span>
+                          </div>
+                        </div>
+                      </div>
+                    </div>
+                  </div>
+                </div>
+
+                <div
+                  class="card-footer text-muted d-flex justify-content-between"
+                >
+                  <div class="balance">
+                    <h5 class="card-title">Balance</h5>
+                    <div class="balo d-flex">
+                      <span>$</span>
+                      <p class="ml-1 card-text bal-amnt"></p>
+                    </div>
+                  </div>
+
+                  <div class="income">
+                    <h5 class="card-title">Income</h5>
+                    <div class="balo d-flex">
+                      <span>$</span>
+                      <p class="ml-1 card-text income-amnt"></p>
+                    </div>
+                  </div>
+                </div>
+              </div>
+            </div>
+          </div>
+        </div>
+      </div>
+    </section>
+    <!-- Optional JavaScript -->
+    <!-- jQuery first, then Popper.js, then Bootstrap JS -->
+    <script
+      src="https://code.jquery.com/jquery-3.5.1.slim.min.js"
+      integrity="sha384-DfXdz2htPH0lsSSs5nCTpuj/zy4C+OGpamoFVy38MVBnE+IbbVYUew+OrCXaRkfj"
+      crossorigin="anonymous"
+    ></script>
+    <script
+      src="https://cdn.jsdelivr.net/npm/popper.js@1.16.1/dist/umd/popper.min.js"
+      integrity="sha384-9/reFTGAW83EW2RDu2S0VKaIzap3H66lZH81PoYlFhbGU+6BZp6G7niu735Sk7lN"
+      crossorigin="anonymous"
+    ></script>
+    <script
+      src="https://stackpath.bootstrapcdn.com/bootstrap/4.5.2/js/bootstrap.min.js"
+      integrity="sha384-B4gt1jrGC7Jh4AgTPSdUtOBvfO8shuf57BaghqFfPlYxofvL8/KUEfYiJOMMV+rV"
+      crossorigin="anonymous"
+    ></script>
+    <script src="app3.js"></script>
+  </body>
+</html>
